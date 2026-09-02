@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Build / scratch / temp
+build/
+dist/
+tmp/
+*.tmp
+*.log
+scratchpad/
+
+# Office / rendering byproducts (keep source .pptx/.docx/.xlsx; ignore exports)
+~$*
+*.pdf.tmp
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
