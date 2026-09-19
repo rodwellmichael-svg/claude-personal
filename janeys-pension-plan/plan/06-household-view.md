@@ -101,6 +101,23 @@ to the household's lifetime income. Two caveats not in the table: retiring early
 **giving up salary** (~£171k/yr) for those years, and funding a **longer retirement** — a
 30+ year retirement from 60 may warrant a more cautious ~3.5% withdrawal rate.
 
+## Comfortable-plus — adding Michael's NEST pot (see the **Comfortable-plus** tab)
+
+Michael's **NEST pot** (his current One Air pension, running since Apr 2025) is separate
+from the £221,974 Aegon SIPP and not yet in the base numbers. Its ongoing contributions
+*are* already counted, so this scenario adds only the **existing NEST balance** on top.
+
+| | Amount |
+|--|--------|
+| NEST pot today (estimate ~£2,707/mo since Apr 2025) | **~£47,000** ⚠️ *replace with real figure* |
+| NEST pot at 65 (grown) | ~£66,800 |
+| Extra drawdown (~4%) | ~£2,674/yr |
+| **Household income — Comfortable-plus** | **~£67,193/yr (~£5,599/mo)** |
+| vs "Comfortable" (£59,000) | ✅ **~£8,193 above** |
+
+Replace the £47k estimate (cell **B4** on the tab) with Michael's actual NEST value for
+an exact figure. Both DC pots also carry 25% tax-free cash at retirement, on top.
+
 ## To refine further — Michael's remaining numbers
 
 - [x] Salary and contributions — **added** (~£171k; ~£32,490/yr into pension)
