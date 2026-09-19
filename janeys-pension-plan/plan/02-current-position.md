@@ -15,7 +15,7 @@ are deliberately kept out of this repo.
 | Planned pension contribution | **£2,880 net / £3,600 gross per year** (non-earner maximum) |
 | Existing personal DC pot | **Unknown** — assumed £0 |
 | **Teachers' Pension (deferred)** | ✅ **Confirmed** — see below |
-| State Pension entitlement | **Unknown** — get a forecast |
+| State Pension entitlement | ✅ **£12,500/yr, full payments** (confirmed) |
 | Other assets | Home shared with Michael, **~£500k, mortgage-free in ~15 years** |
 | Risk appetite | **Medium** |
 
@@ -43,10 +43,9 @@ than expected. From the deferred statement (index-linked, grows with inflation):
 
 ## What's still outstanding
 
-**1. State Pension forecast & NI record. ⚠️**
-Still the top open item. As a homemaker Janey may have NI gaps; filling them is the
-best-value way to lift the ~£11,973 State Pension figure used in the model. Check at
-[gov.uk/check-state-pension](https://www.gov.uk/check-state-pension).
+**1. State Pension — confirmed full. ✅**
+Janey's State Pension is **£12,500/year with full payments** — no NI gaps to fill.
+Being triple-locked and inflation-linked, it's an excellent guaranteed foundation.
 
 **2. Any personal DC pot?**
 The £3,600/year personal pension is assumed to start from £0. If Janey has any other old
@@ -64,7 +63,7 @@ age 67 in ~July 2036; the amount is still worth confirming via a forecast.)
 
 ## Immediate to-dos
 - [x] Trace the Teachers' Pension — **done** (£7,085/yr + £20,945 lump sum)
-- [ ] Get Janey's **State Pension forecast** and NI record
+- [x] Janey's **State Pension** — confirmed £12,500/yr, full payments
 - [ ] Find any **old personal DC pots**
 - [ ] Open/identify the **personal pension / SIPP** for the £3,600/year
 - [x] Michael's main pension & contributions — **added** (~£221,974 Aegon SIPP; ~£32,490/yr in)

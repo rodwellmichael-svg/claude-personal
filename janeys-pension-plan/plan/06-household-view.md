@@ -12,7 +12,7 @@ Personal identifiers (account numbers, NI, contact details) are kept out of this
 | Age | 53 (DOB 05/11/1972) | 57 (DOB 02/07/1969) |
 | Target retirement | 65 | 65 (assumed) |
 | Employment | Homemaker | One Air Ltd, OPS — salary ~£171k |
-| State Pension | £11,973/yr from age 67 — **05/11/2039** | **£241/wk ≈ £12,532/yr** from age 67 — **~02/07/2036** |
+| State Pension | **£12,500/yr, full payments** — from age 67 (**05/11/2039**) | **£241/wk ≈ £12,532/yr** from age 67 — **~02/07/2036** |
 | DB / service pension | **Teachers': £7,085/yr** (£6,982 from age 60) + £20,945 lump sum | **RAF AFPS 75: ~£5,340/yr** from age 60 + ~£16,020 lump sum (estimate) |
 | Private pension pot today | ~£0 (starting the £3,600/yr) | **£221,974** (Aegon SIPP) ✅ |
 | Ongoing contributions | £3,600/yr | **~£32,490/yr** (19% of salary via sacrifice) |
@@ -42,9 +42,9 @@ Personal identifiers (account numbers, NI, contact details) are kept out of this
 |-----------|-------|---------|-----------|
 | Private pension (drawdown ~4%) | ~£2,327 | ~£25,366 | ~£27,693 |
 | DB / service pension (Teachers' · RAF) | £6,982 | ~£5,340 | ~£12,322 |
-| State Pension | £11,973 | £12,532 | £24,505 |
-| **Total annual income** | **~£21,282** | **~£43,238** | **~£64,519** |
-|  |  | **≈ per month** | **~£5,377** |
+| State Pension | £12,500 | £12,532 | £25,032 |
+| **Total annual income** | **~£21,809** | **~£43,238** | **~£65,046** |
+|  |  | **≈ per month** | **~£5,421** |
 
 **Plus one-off tax-free lump sums around age 60:** Janey ~£20,945 (Teachers') + Michael
 ~£16,020 (RAF) ≈ **~£37,000**, on top of the 25% tax-free cash from the DC pots.
@@ -53,22 +53,22 @@ Personal identifiers (account numbers, NI, contact details) are kept out of this
 
 | Standard | Couple / year | Household position |
 |----------|---------------|--------------------|
-| **Minimum** | ~£22,400 | ✅ **~£42,120 above** |
-| **Moderate** | ~£43,100 | ✅ **~£21,420 above** |
-| **Comfortable** | ~£59,000 | ✅ **~£5,520 above** |
+| **Minimum** | ~£22,400 | ✅ **~£42,650 above** |
+| **Moderate** | ~£43,100 | ✅ **~£21,950 above** |
+| **Comfortable** | ~£59,000 | ✅ **~£6,050 above** |
 
 *PLSA couple figures are illustrative — verify at
 [retirementlivingstandards.org.uk](https://www.retirementlivingstandards.org.uk/).*
 
 ## What this tells us
 
-1. **The household clears "Comfortable" with room to spare.** ~£64,520/year (~£5,377/month),
-   ~£5,500 above the PLSA "Comfortable" couple standard — and that's *before* Michael's NEST
+1. **The household clears "Comfortable" with room to spare.** ~£65,046/year (~£5,421/month),
+   ~£6,050 above the PLSA "Comfortable" couple standard — and that's *before* Michael's NEST
    pot and on the conservative contribution reading (£32,490/yr). At £49,590/yr it's higher again.
 2. **Four guaranteed, inflation-linked income streams** underpin it: two State Pensions
-   (~£24,500), Janey's Teachers' Pension (~£7,000) and Michael's RAF pension (~£5,340) =
-   ~£36,800/year secure and index-linked — ~57% of the household total before any investment
-   risk. Unusually resilient.
+   (~£25,032, both full), Janey's Teachers' Pension (~£7,000) and Michael's RAF pension
+   (~£5,340) = ~£37,350/year secure and index-linked — ~57% of the household total before any
+   investment risk. Unusually resilient.
 3. **Michael's DC pot is the growth engine.** ~£222k + ~£32,490/year for 8 years → ~£634,000
    by 65, giving ~£25,400/year of drawdown — the single largest stream.
 4. **Two service pensions + lump sums land at age 60.** Janey's Teachers' and Michael's RAF
@@ -91,9 +91,9 @@ are unaffected.
 
 | Michael retires at | His pot at retirement | Household income /yr | vs "Comfortable" (£59k) |
 |--------------------|-----------------------|----------------------|--------------------------|
-| **60** | ~£359,800 | **~£53,500** (~£4,462/mo) | ~£5,450 short (but ~£10k above "Moderate") |
-| **62** | ~£462,400 | **~£57,650** (~£4,804/mo) | ~£1,350 short |
-| **65** | ~£634,100 | **~£64,500** (~£5,377/mo) | ~£5,520 above |
+| **60** | ~£359,800 | **~£54,070** (~£4,506/mo) | ~£4,930 short (but ~£11k above "Moderate") |
+| **62** | ~£462,400 | **~£58,175** (~£4,848/mo) | ~£825 short |
+| **65** | ~£634,100 | **~£65,046** (~£5,421/mo) | ~£6,050 above |
 
 **Reading it:** retiring at **60 is very doable** — ~£53,500/year is well above "Moderate"
 and only ~£5,450 short of "Comfortable". Each extra year worked adds roughly £2,000/year
@@ -112,8 +112,8 @@ from the £221,974 Aegon SIPP and not yet in the base numbers. Its ongoing contr
 | NEST pot today (estimate ~£2,707/mo since Apr 2025) | **~£47,000** ⚠️ *replace with real figure* |
 | NEST pot at 65 (grown) | ~£66,800 |
 | Extra drawdown (~4%) | ~£2,674/yr |
-| **Household income — Comfortable-plus** | **~£67,193/yr (~£5,599/mo)** |
-| vs "Comfortable" (£59,000) | ✅ **~£8,193 above** |
+| **Household income — Comfortable-plus** | **~£67,720/yr (~£5,643/mo)** |
+| vs "Comfortable" (£59,000) | ✅ **~£8,720 above** |
 
 Replace the £47k estimate (cell **B4** on the tab) with Michael's actual NEST value for
 an exact figure. Both DC pots also carry 25% tax-free cash at retirement, on top.
@@ -138,11 +138,11 @@ Household income (today's money, indicative) as each stream switches on:
 | 2034 | 65 / 62 | Mike retires, draws DC pot | ~£37,687 |
 | 2036 | 67 / 64 | Mike's State Pension starts | ~£50,219 |
 | 2037 | 68 / 65 | Jane retires, draws DC pot | ~£52,546 |
-| 2039 | 70 / 67 | Jane's State Pension starts — **all streams on** | **~£64,519** |
+| 2039 | 70 / 67 | Jane's State Pension starts — **all streams on** | **~£65,046** |
 
 The key point: **both service pensions and both tax-free lump sums arrive from age 60**,
 so there's no real income gap before the State Pensions begin — each transition steps
-income *up*. Household income climbs from ~£5,340 (2029) to its ~£64,519 steady state
+income *up*. Household income climbs from ~£5,340 (2029) to its ~£65,046 steady state
 by 2039, comfortably above "Comfortable" throughout the fully-retired years.
 
 *(Today's-money/real terms; the guaranteed pensions are index-linked. The DC pots' 25%

@@ -6,7 +6,7 @@ Janey's figures are in.
 ## Gather (this session)
 - [x] Confirm Janey's core inputs (age 53, retire 65, homemaker, £3,600/yr, medium risk)
 - [x] Trace the **Teachers' Pension** — done (£7,085/yr + £20,945 lump sum, from age 60/67)
-- [ ] Get Janey's **State Pension forecast** — [gov.uk/check-state-pension](https://www.gov.uk/check-state-pension)
+- [x] Janey's **State Pension** — confirmed £12,500/yr, full payments (no NI gaps)
 - [ ] Trace any **old personal DC pots** ([gov.uk/find-pension-contact-details](https://www.gov.uk/find-pension-contact-details))
 - [ ] Add **Michael's** private pension (pot + contributions) and confirm his State Pension date
 - [ ] Check charges on any personal pot (the annual % fee)
@@ -20,7 +20,7 @@ Janey's figures are in.
 
 ## Act
 - [ ] Open a **low-cost personal pension / SIPP** and set up **£240/month net** (£3,600/yr gross)
-- [ ] Fill worthwhile **NI gaps** for Janey's State Pension (best-value action once the forecast is in)
+- [x] Janey's State Pension NI record — **complete** (full payments confirmed, no gaps)
 - [ ] Add **Michael's** pension figures to the model and decide any household top-ups (his pension / ISAs)
 - [ ] Keep the Teachers' Pension **in place** — do not transfer it out
 - [ ] Consider **regulated advice** for any large/complex decision (never a DB transfer without it)

@@ -25,8 +25,8 @@ Teachers' Pension and State Pension do the heavy lifting.
 |-----------|-----------|-----------|---------|
 | Teachers' Pension (from 60) | £6,982 | £6,982 | £7,085 |
 | Personal pension (drawdown, from 65) | — | ~£2,300 | ~£2,300 |
-| State Pension (from 67) | — | — | £11,973 |
-| **Total** | **~£6,982** + £20,945 lump sum | **~£9,300** | **~£21,300** |
+| State Pension (from 67) | — | — | £12,500 |
+| **Total** | **~£6,982** + £20,945 lump sum | **~£9,300** | **~£21,900** |
 
 *The model's "bridge" columns (65–66) now show **~£9,300/year** — the Teachers' Pension
 already covers most of the pre-State-Pension years, plus there's the £20,945 tax-free
@@ -38,7 +38,7 @@ lump sum available from 60.*
    from **age 60** and a ~£20,945 tax-free lump sum, the years before the State Pension
    (67) are well covered — the earlier worry about a thin 65→67 gap is much reduced.
 2. **Two guaranteed, inflation-linked incomes form the backbone** — Teachers' (£7,085)
-   and State Pension (£11,973) = ~£19,000/year for life, before the personal pot.
+   and State Pension (£12,500, full) = ~£19,600/year for life, before the personal pot.
 3. **The £3,600/year personal pension is a modest top-up** (~£2,300/year) — still worth
    doing for the free 25% tax relief, but not the foundation.
 4. **A timing decision to make:** when to take the Teachers' 80th pension (age 60
@@ -47,14 +47,14 @@ lump sum available from 60.*
 
 ## Against the benchmarks (single person, today's money)
 
-Janey's own ~£20,000/year in today's money at 67+ (Teachers' + State Pension + a little
+Janey's own ~£21,900/year in today's money at 67+ (Teachers' + State Pension + a little
 drawdown) comfortably clears the PLSA **"Minimum"** (~£13,400) and approaches **"Moderate"**
 (~£31,700) for a single person — and the **household** picture (see
 [06](06-household-view.md)) is stronger still.
 
 ## Levers to improve the outcome (change these in the spreadsheet)
 
-- **Secure full State Pension** → fill any NI gaps; keep `Inputs!B30` at 100% only once confirmed.
+- **State Pension** → confirmed £12,500/yr, full payments (no NI gaps to fill).
 - **Time the Teachers' Pension** → age 60 unreduced; taking it earlier reduces it.
 - **Lower charges** on the personal pot → `Inputs!B21`.
 - **Household contributions** → Michael's pot/contributions on the Inputs tab, and ISAs.

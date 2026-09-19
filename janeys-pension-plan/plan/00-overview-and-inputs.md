@@ -25,7 +25,7 @@ with Janey** — placeholders until then.
 | 4 | **Any defined-benefit (final salary) pension?** | DB pays a guaranteed income — modelled separately. | ✅ Teachers' Pension £7,085/yr + £20,945 lump sum |
 | 5 | **Gross annual salary / income** | Drives contribution amounts and tax relief. | ✅ None (homemaker) |
 | 6 | **Current contributions** — employee %/£ + employer %/£ | The engine of pot growth. | ✅ £3,600 gross/yr (non-earner max) |
-| 7 | **State Pension position** — NI qualifying years so far | Determines the flat-rate State Pension. | ⚠️ Unknown — get a forecast |
+| 7 | **State Pension position** — NI qualifying years so far | Determines the flat-rate State Pension. | ✅ £12,500/yr, full payments |
 | 8 | **Target retirement income** (annual, today's money) | The "enough" number to plan toward. | _to discuss_ |
 | 9 | **Other retirement assets** — ISAs, savings, property | Can supplement pension income. | ✅ ~£500k home (shared, mortgage-free) |
 | 10 | **Risk appetite / expected growth** | Sets the return assumption in the model. | ✅ Medium (5% central) |

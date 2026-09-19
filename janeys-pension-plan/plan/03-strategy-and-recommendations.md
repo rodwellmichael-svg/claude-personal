@@ -9,13 +9,10 @@ Because Janey has no earned income, the biggest wins aren't "contribute more" �
 already at the £3,600 cap. They're about **securing guaranteed income** and **not
 leaving free money on the table**:
 
-### 1. Secure the State Pension (do this first)
-- Get the **forecast** at [gov.uk/check-state-pension](https://www.gov.uk/check-state-pension).
-- **Fill any NI gaps.** For a homemaker this is common and often the *single best return*
-  available: a full year's voluntary NI (~£900) can add ~£330/year to the State Pension
-  **for life** — paid back within ~3 years and inflation-linked thereafter.
-- Check whether **NI credits** are owed (e.g. years claiming Child Benefit for a child
-  under 12, or as a carer) — these may be claimable/transferable and cost nothing.
+### 1. State Pension — confirmed full ✅
+- Janey's State Pension is **£12,500/year with full payments** — her NI record is
+  complete, so there are **no gaps to fill**. Nothing to do here beyond keeping it in mind
+  as the triple-locked, inflation-linked backbone of her income (from age 67).
 
 ### 2. Use the Teachers' Pension well (confirmed ✅)
 - Now known: **£6,981.65/year from age 60** (unreduced) + a **£20,944.98 tax-free lump
