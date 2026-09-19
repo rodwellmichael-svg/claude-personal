@@ -1,32 +1,54 @@
 # 03 — Strategy & Recommendations
 
-> Firms up once Janey's figures are in. The levers below apply to almost any UK
-> DC pension plan; the plan will say **which** to pull and **by how much** for Janey.
+Tailored to Janey: **age 53, retiring at 65, homemaker, medium risk**, contributing the
+non-earner maximum, with a home shared with her husband.
 
-## The levers that move the outcome
+## The order of priorities (highest value first)
 
-1. **Contribute more, sooner.** Time in the market is the biggest single factor —
-   money invested at 40 has ~25+ years to compound. Capture the **full employer match**
-   first (free money), then step contributions up over time (e.g. with pay rises).
-2. **Claim all the tax relief.** Ensure higher-rate relief is claimed if applicable;
-   consider salary sacrifice if the employer offers it (NI savings too).
-3. **Mind the allowances.** Stay within the Annual Allowance; avoid triggering the
-   MPAA while still contributing; use carry-forward if catching up.
-4. **Get the investment approach right.** Match risk to the time horizon and comfort;
-   check the default fund isn't overly cautious for the years available; keep
-   **charges low** — 0.5% vs. 1.5% a year is enormous over decades.
-5. **Consolidate thoughtfully.** Tracing and combining old pots can cut charges and
-   admin — but **check for exit penalties and valuable guarantees (esp. DB / GARs)
-   before moving anything**.
-6. **Fill State Pension gaps.** Voluntary NI to reach 35 qualifying years is often
-   outstanding value — check the forecast first.
-7. **Plan the decumulation.** Decide the drawdown/annuity/mix approach and the
-   tax-efficient order of drawing pension vs. ISA vs. cash.
+Because Janey has no earned income, the biggest wins aren't "contribute more" — she's
+already at the £3,600 cap. They're about **securing guaranteed income** and **not
+leaving free money on the table**:
 
-## Recommendations for Janey (to complete)
+### 1. Secure the State Pension (do this first)
+- Get the **forecast** at [gov.uk/check-state-pension](https://www.gov.uk/check-state-pension).
+- **Fill any NI gaps.** For a homemaker this is common and often the *single best return*
+  available: a full year's voluntary NI (~£900) can add ~£330/year to the State Pension
+  **for life** — paid back within ~3 years and inflation-linked thereafter.
+- Check whether **NI credits** are owed (e.g. years claiming Child Benefit for a child
+  under 12, or as a carer) — these may be claimable/transferable and cost nothing.
 
-- _Contribution target: raise from X% to Y% to reach the goal_
-- _Investment/charges action_
-- _State Pension action_
-- _Consolidation view_
-- _Whether regulated advice is warranted (e.g. DB transfer, large sums)_
+### 2. Trace and value the school DB pension
+- Contact the **Teachers' Pension Scheme** (teacherspensions.co.uk) or the relevant
+  **LGPS** fund and request a **deferred benefit statement**.
+- It's guaranteed, inflation-linked income — **do not transfer it out**. Just know the
+  number so it can go into the plan.
+
+### 3. Pay the £3,600/year — and claim the free relief
+- £2,880 net becomes £3,600 in the pension automatically (the 25% uplift). Set it up as
+  a **regular monthly amount (£240/month net)** so it's invested steadily.
+- Use a **low-cost personal pension / SIPP** — charges matter enormously over 12 years.
+- Invest in line with **medium risk** and the 12-year horizon (a mainstream global
+  multi-asset / "medium risk" fund is typical); avoid leaving it in cash.
+
+### 4. Plan the 65 → 67 income bridge
+- Decide how the two years before the State Pension are covered: drawing more from the
+  private pot early, the husband's income/pension, or other savings.
+
+### 5. Take the household view
+- The plan is Janey's, but retirement is a **household** outcome. Worth looking at:
+  - Whether the **husband** can contribute more (his own allowance is much larger if he
+    has earnings), or pay into **ISAs** that either can draw on flexibly.
+  - The **£500k mortgage-free home** — an asset that can support later-life options
+    (downsizing, etc.), though not day-to-day income unless acted on.
+
+## What we're *not* recommending
+- **Not** transferring the DB pension out.
+- **Not** chasing high-risk investments to "catch up" — medium risk suits the horizon.
+- **Not** relying on the property for income unless there's a concrete plan to release it.
+
+## When to get regulated advice
+- Before any DB transfer (required by law over £30k anyway — and the answer is almost
+  always "don't").
+- If the household wants a full retirement-income plan drawing several pots and assets
+  together tax-efficiently. Find an adviser via
+  [FCA register](https://register.fca.org.uk/) / [Unbiased](https://www.unbiased.co.uk/).
