@@ -17,11 +17,15 @@ leaving free money on the table**:
 - Check whether **NI credits** are owed (e.g. years claiming Child Benefit for a child
   under 12, or as a carer) — these may be claimable/transferable and cost nothing.
 
-### 2. Trace and value the school DB pension
-- Contact the **Teachers' Pension Scheme** (teacherspensions.co.uk) or the relevant
-  **LGPS** fund and request a **deferred benefit statement**.
-- It's guaranteed, inflation-linked income — **do not transfer it out**. Just know the
-  number so it can go into the plan.
+### 2. Use the Teachers' Pension well (confirmed ✅)
+- Now known: **£6,981.65/year from age 60** (unreduced) + a **£20,944.98 tax-free lump
+  sum**, plus £103.48/year from 67. Guaranteed and inflation-linked — **do not transfer
+  it out.**
+- **Decide the timing:** age 60 is the natural point to take the 80th pension unreduced.
+  Taking it earlier (from 55/57) reduces it; deferring past 60 doesn't add actuarial
+  uplift the way delaying the State Pension does, so age 60 is usually the sweet spot.
+- The **£20,945 tax-free lump sum** at 60 is useful flexible cash — for the bridge years,
+  clearing any short-term costs, or reinvesting (e.g. into ISAs).
 
 ### 3. Pay the £3,600/year — and claim the free relief
 - £2,880 net becomes £3,600 in the pension automatically (the 25% uplift). Set it up as
@@ -30,9 +34,10 @@ leaving free money on the table**:
 - Invest in line with **medium risk** and the 12-year horizon (a mainstream global
   multi-asset / "medium risk" fund is typical); avoid leaving it in cash.
 
-### 4. Plan the 65 → 67 income bridge
-- Decide how the two years before the State Pension are covered: drawing more from the
-  private pot early, the husband's income/pension, or other savings.
+### 4. The income bridge is largely solved
+- The Teachers' Pension (£6,982/year from **age 60**) plus its £20,945 lump sum already
+  cover the years before the State Pension (67) well. The remaining task is just to
+  decide the drawdown order: Teachers' from 60, personal pot from 65, State Pension at 67.
 
 ### 5. Take the household view
 - The plan is Janey's, but retirement is a **household** outcome. Worth looking at:

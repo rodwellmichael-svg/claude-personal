@@ -1,55 +1,65 @@
 # 02 — Current Position
 
-Based on Janey's figures (Sept 2026). Items marked ⚠️ need confirming — they're the
-highest-value next steps.
+Based on Janey's figures and her **Teachers' Pension benefit statement** (dated
+19 Sep 2026). Personal identifiers (NI number, TP reference, address, contact details)
+are deliberately kept out of this repo.
 
 ## Snapshot
 
 | Item | Value |
 |------|-------|
-| Current age | **53** |
-| Target retirement age | **65** (12 years away) |
-| State Pension age | **67** ⚠️ — *not* 65; there's a 2-year income bridge to plan |
+| Current age | **53** (DOB 05/11/1972) |
+| Target retirement age | **65** |
+| State Pension age | **67** (State Pension from ~Nov 2039) |
 | Employment status | **Homemaker** (no earned income) |
-| Planned pension contribution | **£2,880 net / £3,600 gross per year** (non-earner maximum), starting ASAP |
-| Existing DC pot value | **Unknown** — assumed £0 in the model for now |
-| School pension (~1998–2002) | ⚠️ Almost certainly a **deferred defined-benefit pension** — to trace |
-| State Pension entitlement | **Unknown** ⚠️ — get a forecast |
-| Other assets | Home shared with husband, **~£500k, mortgage-free in ~15 years** |
+| Planned pension contribution | **£2,880 net / £3,600 gross per year** (non-earner maximum) |
+| Existing personal DC pot | **Unknown** — assumed £0 |
+| **Teachers' Pension (deferred)** | ✅ **Confirmed** — see below |
+| State Pension entitlement | **Unknown** — get a forecast |
+| Other assets | Home shared with Michael, **~£500k, mortgage-free in ~15 years** |
 | Risk appetite | **Medium** |
 
-## What this means
+## Janey's Teachers' Pension — the big find ✅
 
-**1. The school pension is a hidden asset. ⚠️**
-Two years working for a UK state school (~1998–2002) almost certainly means a
-**deferred defined-benefit (DB) pension** — either the **Teachers' Pension Scheme**
-(if teaching) or the **Local Government Pension Scheme / LGPS** (if support staff).
-DB pensions pay a **guaranteed, inflation-linked income for life** — you don't need a
-pot value, you request a *deferred benefit statement*. It'll be small (2 years'
-service) but it's real money and it's been quietly revaluing with inflation for 20+
-years. This is why the earlier "no DB pension" answer should be revisited.
+The "school pension" is a genuine **defined-benefit** pension, and it's more valuable
+than expected. From the deferred statement (index-linked, grows with inflation):
 
-**2. The State Pension is the backbone — and there may be gaps. ⚠️**
-For most people with a modest private pot, the flat-rate State Pension (~£11,973/year
-in today's money) is the *largest* single slice of retirement income. As a homemaker,
-Janey may have **National Insurance gaps** for years she wasn't working or getting NI
-credits. The single most valuable action in this whole plan is likely to:
-- get her **State Pension forecast** (gov.uk/check-state-pension), and
-- **fill any gaps** — voluntary NI or backdated credits (e.g. from Child Benefit years)
-  routinely return far more in lifetime pension than they cost.
+| Part | Amount | When |
+|------|--------|------|
+| **80th Final Salary pension** | **£6,981.65/year** | Unreduced from **age 60** (Nov 2032) |
+| **Automatic tax-free lump sum** | **£20,944.98** | One-off, with the above, from age 60 |
+| Career Average pension | £103.48/year | From age 67 (Nov 2039) |
+| **Total annual pension** | **£7,085.13/year** | From age 67 |
 
-**3. There's a 2-year income bridge (65 → 67).**
-Janey wants to stop at 65, but the State Pension won't start until 67. Those two years
-have to be covered by the private pension, savings, or the household's income.
+*(8 years 288 days' service; average salary ~£39,723.)*
 
-**4. The £3,600/year is worthwhile but modest.**
-Even as a non-earner, Janey gets **£720/year of free tax relief** on £2,880 — that's an
-instant 25% uplift, so it's absolutely worth doing. But £3,600/year for 12 years builds
-a **modest** pot (see [projections](04-projections-and-scenarios.md)), so the plan
-leans on the State Pension, the DB pension, and the household picture too.
+**Why this matters so much:**
+- It's **guaranteed, inflation-linked income for life** — the gold standard.
+- **£6,982/year + a ~£20,945 tax-free lump sum are available from age 60** — *five years
+  before* Janey's planned retirement at 65. This largely **solves the income-bridge
+  problem** I flagged earlier: the years before the State Pension (67) are well covered.
+- **Do not transfer it out.** Just decide *when* to take it (age 60 unreduced is the
+  natural point; taking it earlier reduces it).
+
+## What's still outstanding
+
+**1. State Pension forecast & NI record. ⚠️**
+Still the top open item. As a homemaker Janey may have NI gaps; filling them is the
+best-value way to lift the ~£11,973 State Pension figure used in the model. Check at
+[gov.uk/check-state-pension](https://www.gov.uk/check-state-pension).
+
+**2. Any personal DC pot?**
+The £3,600/year personal pension is assumed to start from £0. If Janey has any other old
+pots, trace them ([gov.uk/find-pension-contact-details](https://www.gov.uk/find-pension-contact-details)).
+
+**3. A DOB flag for Michael.**
+Janey's statement lists her spouse's DOB as 01/07/1969 (→ age ~57). A 1969 DOB would
+normally give a State Pension age around 2036–37, not Nov 2039 — worth confirming
+Michael's State Pension date and amount at gov.uk.
 
 ## Immediate to-dos
-- [ ] Get the **State Pension forecast** and NI record
-- [ ] Trace the **school DB pension** (request a deferred statement)
-- [ ] Find any **old/forgotten DC pots** (gov.uk/find-pension-contact-details)
-- [ ] Open (or identify) the **personal pension / SIPP** to receive the £3,600/year
+- [x] Trace the Teachers' Pension — **done** (£7,085/yr + £20,945 lump sum)
+- [ ] Get Janey's **State Pension forecast** and NI record
+- [ ] Find any **old personal DC pots**
+- [ ] Open/identify the **personal pension / SIPP** for the £3,600/year
+- [ ] Confirm **Michael's** State Pension date & amount, and his private pension figures

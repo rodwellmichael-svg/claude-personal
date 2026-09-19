@@ -19,18 +19,18 @@ with Janey** — placeholders until then.
 
 | # | Input | Why it matters | Janey's figure |
 |---|-------|----------------|----------------|
-| 1 | **Current age / date of birth** | Sets the years-to-retirement and State Pension age. | _to confirm_ |
-| 2 | **Target retirement age** | The horizon everything compounds over. | _to confirm_ |
-| 3 | **Current pension pot(s)** — value of each DC pot | The starting balance. | _to confirm_ |
-| 4 | **Any defined-benefit (final salary) pension?** | DB pays a guaranteed income — modelled separately. | _to confirm_ |
-| 5 | **Gross annual salary / income** | Drives contribution amounts and tax relief. | _to confirm_ |
-| 6 | **Current contributions** — employee %/£ + employer %/£ | The engine of pot growth. | _to confirm_ |
-| 7 | **State Pension position** — NI qualifying years so far | Determines the flat-rate State Pension. | _to confirm_ |
-| 8 | **Target retirement income** (annual, today's money) | The "enough" number to plan toward. | _to confirm_ |
-| 9 | **Other retirement assets** — ISAs, savings, property | Can supplement pension income. | _to confirm_ |
-| 10 | **Risk appetite / expected growth** | Sets the return assumption in the model. | _to confirm_ |
-| 11 | **Employment status** — employed / self-employed / director | Affects which pension route and reliefs apply. | _to confirm_ |
-| 12 | **Expected lump sums** — inheritance, bonuses, sale proceeds | One-off boosts to the pot. | _to confirm_ |
+| 1 | **Current age / date of birth** | Sets the years-to-retirement and State Pension age. | ✅ 53 (DOB 05/11/1972) |
+| 2 | **Target retirement age** | The horizon everything compounds over. | ✅ 65 |
+| 3 | **Current pension pot(s)** — value of each DC pot | The starting balance. | Unknown — assumed £0 |
+| 4 | **Any defined-benefit (final salary) pension?** | DB pays a guaranteed income — modelled separately. | ✅ Teachers' Pension £7,085/yr + £20,945 lump sum |
+| 5 | **Gross annual salary / income** | Drives contribution amounts and tax relief. | ✅ None (homemaker) |
+| 6 | **Current contributions** — employee %/£ + employer %/£ | The engine of pot growth. | ✅ £3,600 gross/yr (non-earner max) |
+| 7 | **State Pension position** — NI qualifying years so far | Determines the flat-rate State Pension. | ⚠️ Unknown — get a forecast |
+| 8 | **Target retirement income** (annual, today's money) | The "enough" number to plan toward. | _to discuss_ |
+| 9 | **Other retirement assets** — ISAs, savings, property | Can supplement pension income. | ✅ ~£500k home (shared, mortgage-free) |
+| 10 | **Risk appetite / expected growth** | Sets the return assumption in the model. | ✅ Medium (5% central) |
+| 11 | **Employment status** — employed / self-employed / director | Affects which pension route and reliefs apply. | ✅ Homemaker |
+| 12 | **Expected lump sums** — inheritance, bonuses, sale proceeds | One-off boosts to the pot. | Teachers' lump sum £20,945 at 60 |
 
 ### Handy benchmark: the "enough" number
 
