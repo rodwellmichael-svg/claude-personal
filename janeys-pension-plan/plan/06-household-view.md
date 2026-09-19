@@ -83,6 +83,24 @@ Personal identifiers (account numbers, NI, contact details) are kept out of this
 7. **The £500k mortgage-free home is a backstop** — upside for "Comfortable-plus", care
    costs, or a legacy, not needed for the core plan.
 
+## Should Michael retire earlier? (see the **Retire 60 vs 65** tab)
+
+Only Michael's DC pot changes with his retirement age — fewer contributions and less
+growth mean a smaller pot and lower drawdown for life. RAF, State and Janey's pensions
+are unaffected.
+
+| Michael retires at | His pot at retirement | Household income /yr | vs "Comfortable" (£59k) |
+|--------------------|-----------------------|----------------------|--------------------------|
+| **60** | ~£359,800 | **~£53,500** (~£4,462/mo) | ~£5,450 short (but ~£10k above "Moderate") |
+| **62** | ~£462,400 | **~£57,650** (~£4,804/mo) | ~£1,350 short |
+| **65** | ~£634,100 | **~£64,500** (~£5,377/mo) | ~£5,520 above |
+
+**Reading it:** retiring at **60 is very doable** — ~£53,500/year is well above "Moderate"
+and only ~£5,450 short of "Comfortable". Each extra year worked adds roughly £2,000/year
+to the household's lifetime income. Two caveats not in the table: retiring early also means
+**giving up salary** (~£171k/yr) for those years, and funding a **longer retirement** — a
+30+ year retirement from 60 may warrant a more cautious ~3.5% withdrawal rate.
+
 ## To refine further — Michael's remaining numbers
 
 - [x] Salary and contributions — **added** (~£171k; ~£32,490/yr into pension)
