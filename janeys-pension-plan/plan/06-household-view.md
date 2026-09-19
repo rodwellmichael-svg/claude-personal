@@ -12,15 +12,16 @@ Personal identifiers (account numbers, NI, contact details) are kept out of this
 | Age | 53 (DOB 05/11/1972) | 57 (DOB 02/07/1969) |
 | Target retirement | 65 | 65 (assumed) |
 | Employment | Homemaker | One Air Ltd, OPS — salary ~£171k |
-| State Pension | £11,973/yr from age 67 (~2039) | **£241/wk ≈ £12,532/yr**, assumed from **Nov 2039** ⚠️ |
+| State Pension | £11,973/yr from age 67 — **05/11/2039** | **£241/wk ≈ £12,532/yr** from age 67 — **~02/07/2036** |
 | DB / service pension | **Teachers': £7,085/yr** (£6,982 from age 60) + £20,945 lump sum | **RAF AFPS 75: ~£5,340/yr** from age 60 + ~£16,020 lump sum (estimate) |
 | Private pension pot today | ~£0 (starting the £3,600/yr) | **£221,974** (Aegon SIPP) ✅ |
 | Ongoing contributions | £3,600/yr | **~£32,490/yr** (19% of salary via sacrifice) |
 | Projected pot at 65 | ~£58,200 | **~£634,140** |
 
-> ⚠️ **Michael's State Pension date:** a July-1969 DOB normally gives a State Pension age
-> of 67 (~July 2036), not Nov 2039 — confirm at gov.uk/check-state-pension. (It doesn't
-> change the steady-state total below, only the timing.)
+> **State Pension dates (from confirmed DOBs):** Michael (02/07/1969) reaches State
+> Pension age 67 in **~July 2036**; Janey (05/11/1972) in **Nov 2039**. (The earlier
+> "Nov 2039" was Janey's date.) Amounts still worth confirming at gov.uk/check-state-pension;
+> dates don't change the steady-state total below, only the bridge timing.
 >
 > **Contribution figure:** £32,490/yr = the employer pension line (£2,707.50/mo, 19% of
 > salary, which under salary sacrifice includes his 10% sacrifice). If the £1,425/mo
@@ -87,7 +88,8 @@ Personal identifiers (account numbers, NI, contact details) are kept out of this
 - [x] Salary and contributions — **added** (~£171k; ~£32,490/yr into pension)
 - [ ] Confirm the contribution total (£32,490 vs £49,590 — see note above)
 - [ ] **NEST pot current value** → add to his existing pot (Inputs B40)
-- [ ] **Confirm State Pension date & amount** (the Nov 2039 flag above)
+- [x] State Pension dates resolved from DOBs (Michael ~Jul 2036, Janey Nov 2039)
+- [ ] Confirm the **State Pension amounts** (forecasts at gov.uk/check-state-pension)
 - [ ] Confirm his **target retirement age** (assumed 65) → Inputs B36
 
 ## Timing note (the bridge years)

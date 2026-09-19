@@ -59,8 +59,8 @@ pension (19% of salary via salary sacrifice). This grows his pot to ~£634,000 b
 He also has an **RAF pension (AFPS 75)** from service 1990–98 (8 yrs, Sergeant, aircrew):
 a **preserved pension of ~£5,340/yr + ~£16,020 tax-free lump sum from age 60** (estimate;
 aircrew rates were higher, so likely more — get an official forecast).
-Still to add: his **NEST pot value**, and a check of his **State Pension date** — a 1969
-DOB normally gives a State Pension age ~2036–37, not the Nov 2039 assumed.
+Still to add: his **NEST pot value**. (State Pension date resolved: DOB 02/07/1969 →
+age 67 in ~July 2036; the amount is still worth confirming via a forecast.)
 
 ## Immediate to-dos
 - [x] Trace the Teachers' Pension — **done** (£7,085/yr + £20,945 lump sum)
