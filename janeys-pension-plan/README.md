@@ -19,6 +19,7 @@ to close any gap.
 - [`03-strategy-and-recommendations.md`](plan/03-strategy-and-recommendations.md) — how to build and manage the pot.
 - [`04-projections-and-scenarios.md`](plan/04-projections-and-scenarios.md) — what the numbers say under different assumptions.
 - [`05-action-checklist.md`](plan/05-action-checklist.md) — concrete next steps.
+- [`06-household-view.md`](plan/06-household-view.md) — Janey + Michael combined, vs. couple benchmarks.
 
 ## Important note
 
