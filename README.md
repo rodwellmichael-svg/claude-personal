@@ -9,6 +9,7 @@ things getting tangled.
 | Project | Folder | What it is |
 |---------|--------|------------|
 | **AeroCert Partners — Airline AOC Consultancy** | [`airline-aoc-consultancy/`](airline-aoc-consultancy/) | A business-creation plan for a specialist consultancy that helps operators obtain and maintain **UK CAA** and **EASA** Air Operator Certificates (AOCs), plus a slide deck and reusable delivery templates. |
+| **Janey's Pension Plan** | [`janeys-pension-plan/`](janeys-pension-plan/) | A personal **UK retirement plan** for Janey: a written plan (pensions primer, current position, strategy, action checklist) plus an adjustable projections spreadsheet. |
 
 ## Airline AOC Consultancy — at a glance
 
