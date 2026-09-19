@@ -53,16 +53,16 @@ The £3,600/year personal pension is assumed to start from £0. If Janey has any
 pots, trace them ([gov.uk/find-pension-contact-details](https://www.gov.uk/find-pension-contact-details)).
 
 **3. Michael's pension is now known (see [06](06-household-view.md)).**
-Michael (DOB 02/07/1969, age 57) has an **Aegon SIPP of ~£221,974** (consolidated from
-Scottish Equitable) and is paying **10% salary sacrifice into a NEST pension** at his
-current employer. Still to add: his **salary** (to quantify contributions), his **NEST
-pot value**, and a check of his **State Pension date** — a 1969 DOB normally gives a
-State Pension age ~2036–37, not the Nov 2039 assumed.
+Michael (DOB 02/07/1969, age 57) earns ~£171k at One Air Ltd, has an **Aegon SIPP of
+~£221,974** (consolidated from Scottish Equitable) and ~£32,490/year going into his
+pension (19% of salary via salary sacrifice). This grows his pot to ~£634,000 by 65.
+Still to add: his **NEST pot value**, and a check of his **State Pension date** — a 1969
+DOB normally gives a State Pension age ~2036–37, not the Nov 2039 assumed.
 
 ## Immediate to-dos
 - [x] Trace the Teachers' Pension — **done** (£7,085/yr + £20,945 lump sum)
 - [ ] Get Janey's **State Pension forecast** and NI record
 - [ ] Find any **old personal DC pots**
 - [ ] Open/identify the **personal pension / SIPP** for the £3,600/year
-- [x] Michael's main pension — **found** (~£221,974 Aegon SIPP)
-- [ ] Add Michael's **salary** (for contributions), **NEST pot value**, and confirm his **State Pension date**
+- [x] Michael's main pension & contributions — **added** (~£221,974 Aegon SIPP; ~£32,490/yr in)
+- [ ] Add Michael's **NEST pot value** and confirm his **State Pension date**
