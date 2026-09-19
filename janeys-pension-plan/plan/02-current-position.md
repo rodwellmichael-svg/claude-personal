@@ -56,6 +56,9 @@ pots, trace them ([gov.uk/find-pension-contact-details](https://www.gov.uk/find-
 Michael (DOB 02/07/1969, age 57) earns ~£171k at One Air Ltd, has an **Aegon SIPP of
 ~£221,974** (consolidated from Scottish Equitable) and ~£32,490/year going into his
 pension (19% of salary via salary sacrifice). This grows his pot to ~£634,000 by 65.
+He also has an **RAF pension (AFPS 75)** from service 1990–98 (8 yrs, Sergeant, aircrew):
+a **preserved pension of ~£5,340/yr + ~£16,020 tax-free lump sum from age 60** (estimate;
+aircrew rates were higher, so likely more — get an official forecast).
 Still to add: his **NEST pot value**, and a check of his **State Pension date** — a 1969
 DOB normally gives a State Pension age ~2036–37, not the Nov 2039 assumed.
 
