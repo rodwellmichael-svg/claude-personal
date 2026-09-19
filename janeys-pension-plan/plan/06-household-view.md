@@ -92,9 +92,24 @@ Personal identifiers (account numbers, NI, contact details) are kept out of this
 - [ ] Confirm the **State Pension amounts** (forecasts at gov.uk/check-state-pension)
 - [ ] Confirm his **target retirement age** (assumed 65) → Inputs B36
 
-## Timing note (the bridge years)
+## Year-by-year timeline (see the **Timeline** tab)
 
-Janey's Teachers' Pension (£6,982/yr + £20,945 lump sum from **age 60**) and Michael's
-sizeable pot mean the years before the State Pensions start are well covered. Once the
-State Pension dates are confirmed, a year-by-year drawdown plan can sequence: Janey's
-Teachers' at 60 → both private pots from 65 → State Pensions when they start.
+Household income (today's money, indicative) as each stream switches on:
+
+| Year | Mike / Jane age | Event | Household /yr |
+|------|-----------------|-------|---------------|
+| 2029 | 60 / 57 | Mike's RAF pension + **£16,020 lump sum** | ~£5,340 |
+| 2032 | 63 / 60 | Jane's Teachers' pension + **£20,945 lump sum** | ~£12,322 |
+| 2034 | 65 / 62 | Mike retires, draws DC pot | ~£37,687 |
+| 2036 | 67 / 64 | Mike's State Pension starts | ~£50,219 |
+| 2037 | 68 / 65 | Jane retires, draws DC pot | ~£52,546 |
+| 2039 | 70 / 67 | Jane's State Pension starts — **all streams on** | **~£64,519** |
+
+The key point: **both service pensions and both tax-free lump sums arrive from age 60**,
+so there's no real income gap before the State Pensions begin — each transition steps
+income *up*. Household income climbs from ~£5,340 (2029) to its ~£64,519 steady state
+by 2039, comfortably above "Comfortable" throughout the fully-retired years.
+
+*(Today's-money/real terms; the guaranteed pensions are index-linked. The DC pots' 25%
+tax-free cash is additional to the lump sums shown. First year of each stream may be
+part-year.)*

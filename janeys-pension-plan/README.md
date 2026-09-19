@@ -9,7 +9,7 @@ to close any gap.
 | Item | Where | What it is |
 |------|-------|------------|
 | **Plan** | [`plan/`](plan/) | A written retirement plan in parts: inputs, a UK pensions primer, current position, strategy, projections, a household view, and an action checklist. |
-| **Projections** | [`janeys-pension-projections.xlsx`](janeys-pension-projections.xlsx) | An adjustable model (Inputs, Projection, Retirement income, Household tabs): contributions → growth → pot at retirement → sustainable income, with scenarios and a Janey+Michael household summary. Edit the blue/yellow cells on the **Inputs** tab and everything recalculates. |
+| **Projections** | [`janeys-pension-projections.xlsx`](janeys-pension-projections.xlsx) | An adjustable model (Inputs, Projection, Retirement income, Household, Timeline tabs): contributions → growth → pot at retirement → sustainable income, with scenarios, a Janey+Michael household summary, and a year-by-year timeline through the retirement transitions. Edit the blue/yellow cells on the **Inputs** tab and everything recalculates. |
 
 ## Plan contents
 
