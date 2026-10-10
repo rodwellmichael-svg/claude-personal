@@ -48,7 +48,9 @@ def parse_price(text):
 
 
 def search_url(cfg, s):
-    u = f"https://www.facebook.com/marketplace/{cfg['location']}/search?query={quote(s['query'])}"
+    loc = (cfg.get("location") or "").strip().strip("/")
+    base = f"https://www.facebook.com/marketplace/{loc}/search" if loc else "https://www.facebook.com/marketplace/search"
+    u = f"{base}?query={quote(s['query'])}"
     if s.get("min_price") is not None:
         u += f"&minPrice={s['min_price']}"
     if s.get("max_price") is not None:

@@ -1,5 +1,5 @@
 # Copy to config.yaml and edit.
-location: sydney            # Marketplace city slug, as in facebook.com/marketplace/<slug>/
+location: ""               # leave blank to use the location saved on your Facebook account
 radius_km: 40               # informational; set the radius in the FB UI once if needed
 max_listings_per_search: 30 # listings collected per search
 max_detail_pages: 12        # item pages opened for full descriptions (after prefilter)
