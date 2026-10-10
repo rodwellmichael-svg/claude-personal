@@ -27,3 +27,9 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+
+# marketplace-finder
+marketplace-finder/.profile/
+marketplace-finder/config.yaml
+marketplace-finder/results/
+marketplace-finder/.seen.json

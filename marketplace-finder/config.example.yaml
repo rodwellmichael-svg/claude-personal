@@ -1,0 +1,18 @@
+# Copy to config.yaml and edit.
+location: sydney            # Marketplace city slug, as in facebook.com/marketplace/<slug>/
+radius_km: 40               # informational; set the radius in the FB UI once if needed
+max_listings_per_search: 30 # listings collected per search
+max_detail_pages: 12        # item pages opened for full descriptions (after prefilter)
+model: claude-sonnet-5-5    # used for scoring when ANTHROPIC_API_KEY is set
+
+searches:
+  - name: Road bike
+    query: road bike
+    min_price: 150
+    max_price: 900
+    # What "good value" means for this item; Claude uses this as the brief.
+    wanted: >
+      Aluminium or carbon road bike, 54-56cm frame, Shimano 105 or better,
+      no cracks or major rust, ideally recently serviced.
+    must_include: []          # keywords that must appear in title/description
+    exclude: [kids, "for parts", broken, "wanted"]
