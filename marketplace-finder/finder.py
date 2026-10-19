@@ -26,10 +26,11 @@ def pause(a=1.5, b=3.5):
 
 
 def launch(p, headless):
-    return p.chromium.launch_persistent_context(
-        str(PROFILE), headless=headless, viewport={"width": 1280, "height": 900},
-        locale="en-US",
-    )
+    opts = dict(headless=headless, viewport={"width": 1280, "height": 900}, locale="en-US")
+    try:  # prefer the real Chrome app if installed: far more stable on Facebook than bundled Chromium
+        return p.chromium.launch_persistent_context(str(PROFILE), channel="chrome", **opts)
+    except Exception:
+        return p.chromium.launch_persistent_context(str(PROFILE), **opts)
 
 
 def cmd_login(_):
@@ -114,8 +115,8 @@ def fetch_detail(page, it):
         main = page.locator("div[role=main]").first
         text = main.inner_text() if main.count() else page.inner_text("body")
         it["description"] = re.sub(r"\n{2,}", "\n", text)[:2500]
-    except PWTimeout:
-        pass
+    except Exception as e:  # timeouts, page crashes: skip this listing, keep the run alive
+        print("  skipped detail page:", type(e).__name__)
 
 
 def heuristic_score(items):
@@ -200,9 +201,17 @@ def cmd_run(args):
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
         for s in cfg["searches"]:
             print(f"Searching: {s['name']}")
-            items = prefilter(collect(page, cfg, s), s)
+            try:
+                items = prefilter(collect(page, cfg, s), s)
+            except Exception as e:
+                print("Search failed:", type(e).__name__, str(e)[:200])
+                results[s["name"]] = []
+                continue
             for it in items[: cfg["max_detail_pages"]]:
-                fetch_detail(page, it)
+                try:
+                    fetch_detail(page, it)
+                except Exception:
+                    page = ctx.new_page()  # recover from a crashed tab
                 pause()
             items = prefilter(items, s)
             for it in items:
