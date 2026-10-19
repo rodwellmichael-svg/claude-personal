@@ -25,20 +25,8 @@ searches:
     name: Near Braunton - your saved location
     areas: *west
   - <<: *base
-    name: Near Braunton - Exeter area
-    location: exeter
-    areas: *west
-  - <<: *base
-    name: Near Braunton - Plymouth area
-    location: plymouth
-    areas: *west
-  - <<: *base
     name: Near Braunton - Bristol area
     location: bristol
-    areas: *west
-  - <<: *base
-    name: Near Braunton - Taunton area
-    location: taunton
     areas: *west
   - <<: *base
     name: Near Hampton Wick (30 min drive)

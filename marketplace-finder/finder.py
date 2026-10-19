@@ -178,8 +178,8 @@ Return ONLY a JSON array, one object per listing:
 LISTINGS:
 {json.dumps(slim, ensure_ascii=False)}"""
     resp = anthropic.Anthropic().messages.create(
-        model=model, max_tokens=4000, messages=[{"role": "user", "content": prompt}])
-    text = resp.content[0].text
+        model=model, max_tokens=8000, messages=[{"role": "user", "content": prompt}])
+    text = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
     data = json.loads(text[text.index("["): text.rindex("]") + 1])
     by_id = {str(d["id"]): d for d in data}
     for i in items:
