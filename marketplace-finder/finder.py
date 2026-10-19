@@ -223,6 +223,7 @@ def cmd_run(args):
     if not use_ai:
         print("ANTHROPIC_API_KEY not set (or --no-ai): using simple price heuristic.")
     results = {}
+    run_seen = set()  # listing ids already reported by an earlier search in this run
     with sync_playwright() as p:
         ctx = launch(p, headless=args.headless)
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
@@ -231,7 +232,8 @@ def cmd_run(args):
             try:
                 scfg = {**cfg, "location": s.get("location", cfg.get("location", ""))}
                 found = collect(page, scfg, s)
-                nearby = [i for i in found if in_area(i, s)]
+                nearby = [i for i in found if in_area(i, s) and i["id"] not in run_seen]
+                run_seen.update(i["id"] for i in found)
                 items = prefilter(nearby, s)
                 print(f"  found {len(found)} listings, {len(nearby)} in your areas, {len(items)} passed filters")
             except Exception as e:
