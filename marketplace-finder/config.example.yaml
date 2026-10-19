@@ -14,5 +14,5 @@ searches:
     wanted: >
       Aluminium or carbon road bike, 54-56cm frame, Shimano 105 or better,
       no cracks or major rust, ideally recently serviced.
-    must_include: []          # keywords that must appear in title/description
+    must_include: [imac]          # keywords that must appear in title/description
     exclude: [kids, "for parts", broken, "wanted"]

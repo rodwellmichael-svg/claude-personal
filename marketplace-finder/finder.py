@@ -21,6 +21,9 @@ RESULTS = ROOT / "results"
 SEEN = ROOT / ".seen.json"
 
 
+BADGE = re.compile(r"^(just listed|free shipping|sponsored|pending|sold|price drop|new|\u00b7|ships.*|in stock)$", re.I)
+
+
 def pause(a=1.5, b=3.5):
     time.sleep(random.uniform(a, b))
 
@@ -72,16 +75,21 @@ def collect(page, cfg, s):
             if not m or m.group(1) in items:
                 continue
             lines = [l.strip() for l in a.inner_text().split("\n") if l.strip()]
-            if len(lines) < 2:
+            lines = [l for l in lines if not BADGE.match(l)]
+            price_re = re.compile(r"^(free|[£$€]\s*[\d,]+(\.\d+)?)", re.I)
+            price_lines = [l for l in lines if price_re.match(l)]
+            if not price_lines:
                 continue
-            price_line = next((l for l in lines if re.search(r"\d", l) or l.lower() == "free"), "")
-            rest = [l for l in lines if l != price_line]
+            price_line = price_lines[0]
+            rest = [l for l in lines if not price_re.match(l)]
+            if not rest:
+                continue
             items[m.group(1)] = {
                 "id": m.group(1),
                 "url": f"https://www.facebook.com/marketplace/item/{m.group(1)}/",
                 "price_text": price_line,
-                "price": 0.0 if price_line.lower() == "free" else parse_price(price_line),
-                "title": rest[0] if rest else "",
+                "price": 0.0 if price_line.lower().startswith("free") else parse_price(price_line),
+                "title": rest[0],
                 "location": rest[1] if len(rest) > 1 else "",
                 "description": "",
                 "search": s["name"],
@@ -202,7 +210,9 @@ def cmd_run(args):
         for s in cfg["searches"]:
             print(f"Searching: {s['name']}")
             try:
-                items = prefilter(collect(page, cfg, s), s)
+                found = collect(page, cfg, s)
+                items = prefilter(found, s)
+                print(f"  found {len(found)} listings, {len(items)} passed filters")
             except Exception as e:
                 print("Search failed:", type(e).__name__, str(e)[:200])
                 results[s["name"]] = []
