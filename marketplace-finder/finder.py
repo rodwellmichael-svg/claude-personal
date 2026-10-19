@@ -100,7 +100,9 @@ def collect(page, cfg, s):
         if stalls >= 3:
             break
         last = len(items)
+        page.mouse.move(820, 520)  # cursor must be over the results pane or the wheel scrolls nothing
         page.mouse.wheel(0, 3000)
+        page.keyboard.press("End")
         pause(3, 5)
     RESULTS.mkdir(exist_ok=True)
     shot = RESULTS / "last_search.png"
@@ -124,6 +126,13 @@ def prefilter(items, s):
             continue
         out.append(it)
     return out
+
+
+def in_area(it, s):
+    areas = [a.lower() for a in s.get("areas", [])]
+    if not areas:
+        return True
+    return any(a in it["location"].lower() for a in areas)
 
 
 def fetch_detail(page, it):
@@ -154,7 +163,7 @@ def claude_score(items, s, model):
     slim = [{k: i[k] for k in ("id", "price_text", "title", "location", "description")} for i in items]
     prompt = f"""I'm buying: {s['name']}.
 My brief: {s.get('wanted', '')}
-Budget: {s.get('min_price', 0)} - {s.get('max_price', 'any')}.
+Budget: {s.get('min_price', 0)} - {s.get('max_price', 'any')} (UK market, GBP).
 
 Below are Facebook Marketplace listings as JSON (description is raw page text and may include
 unrelated UI text). Judge VALUE: price vs. likely fair used-market price given the spec,
@@ -220,9 +229,11 @@ def cmd_run(args):
         for s in cfg["searches"]:
             print(f"Searching: {s['name']}")
             try:
-                found = collect(page, cfg, s)
-                items = prefilter(found, s)
-                print(f"  found {len(found)} listings, {len(items)} passed filters")
+                scfg = {**cfg, "location": s.get("location", cfg.get("location", ""))}
+                found = collect(page, scfg, s)
+                nearby = [i for i in found if in_area(i, s)]
+                items = prefilter(nearby, s)
+                print(f"  found {len(found)} listings, {len(nearby)} in your areas, {len(items)} passed filters")
             except Exception as e:
                 print("Search failed:", type(e).__name__, str(e)[:200])
                 results[s["name"]] = []

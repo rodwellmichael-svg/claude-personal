@@ -1,18 +1,34 @@
-# Copy to config.yaml and edit.
-location: ""               # leave blank to use the location saved on your Facebook account
-radius_km: 40               # informational; set the radius in the FB UI once if needed
-max_listings_per_search: 30 # listings collected per search
-max_detail_pages: 12        # item pages opened for full descriptions (after prefilter)
-model: claude-sonnet-5-5    # used for scoring when ANTHROPIC_API_KEY is set
+location: ""                # default: location saved on your Facebook account
+max_listings_per_search: 60
+max_detail_pages: 8
+model: claude-sonnet-5-5
 
 searches:
-  - name: Road bike
-    query: road bike
-    min_price: 150
-    max_price: 900
-    # What "good value" means for this item; Claude uses this as the brief.
+  - name: iMac 27 - near Braunton (up to 2.5h drive)
+    query: imac 27
+    min_price: 200
+    max_price: 500
+    areas: [devon, cornwall, somerset, bristol, bath, weston, taunton, exeter, dorset, dorchester, weymouth, yeovil, bridgwater, glastonbury, wells]
     wanted: >
-      Aluminium or carbon road bike, 54-56cm frame, Shimano 105 or better,
-      no cracks or major rust, ideally recently serviced.
-    must_include: [imac]          # keywords that must appear in title/description
-    exclude: [kids, "for parts", broken, "wanted"]
+      27 inch iMac (5K Retina preferred), Intel Core i9 if possible (otherwise the best
+      i7/i5), SSD or Fusion drive, with the original Apple mouse and keyboard included.
+      Best possible spec for the money: prefer newer year, more RAM, bigger SSD, better
+      graphics. Must be fully working: no cracked screen, faults or water damage.
+      Not for parts or repair. Be sceptical of mislabelled years or too-good-to-be-true prices.
+    must_include: [imac]
+    exclude: [broken, "for parts", spares, repair, faulty, cracked, "not working", wanted, "21.5", "24 inch", mini]
+
+  - name: iMac 27 - near Hampton Wick (30 min drive)
+    location: london
+    query: imac 27
+    min_price: 200
+    max_price: 500
+    areas: [hampton, kingston, surbiton, teddington, twickenham, richmond, kew, putney, wimbledon, morden, sutton, epsom, esher, walton, weybridge, hounslow, isleworth, feltham, staines, heathrow, ealing, brentford, chiswick, hammersmith, fulham, london, surrey, middlesex]
+    wanted: >
+      27 inch iMac (5K Retina preferred), Intel Core i9 if possible (otherwise the best
+      i7/i5), SSD or Fusion drive, with the original Apple mouse and keyboard included.
+      Best possible spec for the money: prefer newer year, more RAM, bigger SSD, better
+      graphics. Must be fully working: no cracked screen, faults or water damage.
+      Not for parts or repair. Be sceptical of mislabelled years or too-good-to-be-true prices.
+    must_include: [imac]
+    exclude: [broken, "for parts", spares, repair, faulty, cracked, "not working", wanted, "21.5", "24 inch", mini]
