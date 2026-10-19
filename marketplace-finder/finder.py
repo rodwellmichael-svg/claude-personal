@@ -67,8 +67,8 @@ def collect(page, cfg, s):
     pause(3, 5)
     if "login" in page.url or page.locator("input[name=email]").count():
         sys.exit("Not logged in. Run: python finder.py login")
-    items, last = {}, -1
-    for _ in range(8):  # scroll to load more
+    items, last, stalls = {}, -1, 0
+    for _ in range(10):  # scroll to load more
         for a in page.locator("a[href*='/marketplace/item/']").all():
             href = a.get_attribute("href") or ""
             m = re.search(r"/marketplace/item/(\d+)", href)
@@ -94,11 +94,21 @@ def collect(page, cfg, s):
                 "description": "",
                 "search": s["name"],
             }
-        if len(items) >= cfg["max_listings_per_search"] or len(items) == last:
+        if len(items) >= cfg["max_listings_per_search"]:
+            break
+        stalls = stalls + 1 if len(items) == last else 0
+        if stalls >= 3:
             break
         last = len(items)
-        page.mouse.wheel(0, 4000)
-        pause(2, 4)
+        page.mouse.wheel(0, 3000)
+        pause(3, 5)
+    RESULTS.mkdir(exist_ok=True)
+    shot = RESULTS / "last_search.png"
+    try:
+        page.screenshot(path=str(shot))
+    except Exception:
+        pass
+    print(f"  page: {page.url}\n  screenshot: {shot}")
     return list(items.values())[: cfg["max_listings_per_search"]]
 
 
