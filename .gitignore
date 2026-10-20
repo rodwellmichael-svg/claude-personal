@@ -33,3 +33,5 @@ marketplace-finder/.profile/
 marketplace-finder/config.yaml
 marketplace-finder/results/
 marketplace-finder/.seen.json
+marketplace-finder/.env
+marketplace-finder/logs/

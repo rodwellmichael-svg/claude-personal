@@ -7,7 +7,8 @@
 Automating Facebook breaks Meta's terms of service. Use a dedicated account, keep
 volumes low, and expect selectors to need occasional maintenance.
 """
-import argparse, html, json, os, random, re, statistics, subprocess, sys, time, webbrowser
+import argparse, html, json, os, random, re, smtplib, ssl, statistics, subprocess, sys, time, webbrowser
+from email.message import EmailMessage
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote
@@ -214,7 +215,7 @@ LISTINGS:
     return items
 
 
-def render(results, path):
+def build_html(results):
     rows = []
     for name, items in results.items():
         rows.append(f"<h2>{html.escape(name)}</h2>")
@@ -232,13 +233,67 @@ def render(results, path):
                 f"{html.escape(i['reasons'])}"
                 + (f"<br><span class='f'>⚠ {html.escape(i['red_flags'])}</span>" if i["red_flags"] else "")
                 + "</div>")
-    path.write_text(
+    return (
         "<meta charset=utf-8><title>Marketplace results</title><style>"
         "body{font:15px system-ui;max-width:820px;margin:2em auto;padding:0 1em}"
         ".c{border:1px solid #ccc;border-left:6px solid #aaa;border-radius:6px;padding:.6em .8em;margin:.6em 0}"
         ".buy{border-left-color:#2a9d3f}.maybe{border-left-color:#e0a800}.skip{opacity:.6}"
         ".f{color:#b00020}</style>"
         f"<h1>Marketplace results · {datetime.now():%Y-%m-%d %H:%M}</h1>" + "".join(rows))
+
+
+def render(results, path):
+    path.write_text(build_html(results))
+
+
+def send_email(subject, text, html_body=None):
+    host = os.environ.get("SMTP_HOST", "smtp.gmail.com")
+    port = int(os.environ.get("SMTP_PORT", "587"))
+    user, pw, to = os.environ.get("SMTP_USER"), os.environ.get("SMTP_PASSWORD"), os.environ.get("EMAIL_TO")
+    if not (user and pw and to):
+        raise RuntimeError("Set SMTP_USER, SMTP_PASSWORD and EMAIL_TO in marketplace-finder/.env")
+    msg = EmailMessage()
+    msg["Subject"], msg["From"], msg["To"] = subject, user, to
+    msg.set_content(text)
+    if html_body:
+        msg.add_alternative(html_body, subtype="html")
+    with smtplib.SMTP(host, port, timeout=30) as smtp:
+        smtp.starttls(context=ssl.create_default_context())
+        smtp.login(user, pw)
+        smtp.send_message(msg)
+
+
+def email_report(results, out):
+    items = [i for lst in results.values() for i in lst]
+    new = [i for i in items if i.get("new") and i["verdict"] != "skip"]
+    buys = [i for i in new if i["verdict"] == "buy"]
+    if new:
+        subject = f"Marketplace iMacs: {len(new)} new ({len(buys)} buy)"
+    else:
+        subject = "Marketplace iMacs: no new listings"
+    lines = [f"{len(items)} listings checked, {len(new)} new and worth a look.", ""]
+    for i in sorted(new, key=lambda x: -x["value_score"])[:10]:
+        lines.append(f"[{i['verdict']} {i['value_score']}] {i['price_text']} {i['title']} - {i['location']}\n  {i['url']}")
+    lines.append(f"\nFull report: {out}")
+    send_email(subject, "\n".join(lines), build_html(results))
+    print("Email sent:", subject)
+
+
+def cmd_test_email(_):
+    send_email("Marketplace finder: test email", "Email settings work.")
+    print("Test email sent to", os.environ.get("EMAIL_TO"))
+
+
+def load_env():
+    """Read KEY=value lines from marketplace-finder/.env (git-ignored) so scheduled runs see them."""
+    f = ROOT / ".env"
+    if not f.exists():
+        return
+    for line in f.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1)
+            os.environ.setdefault(k.strip(), v.strip().strip("\"'"))
 
 
 def cmd_run(args):
@@ -291,6 +346,11 @@ def cmd_run(args):
     (RESULTS / f"{stamp}.json").write_text(json.dumps(results, indent=2))
     SEEN.write_text(json.dumps(sorted(seen)))
     print("Report:", out)
+    if args.email:
+        try:
+            email_report(results, out)
+        except Exception as e:
+            print("Email failed:", type(e).__name__, e)
     if not args.no_open:
         webbrowser.open(out.as_uri())
 
@@ -303,6 +363,17 @@ if __name__ == "__main__":
     r.add_argument("--headless", action="store_true", help="hide the browser (more likely to be flagged)")
     r.add_argument("--no-ai", action="store_true")
     r.add_argument("--no-open", action="store_true")
+    r.add_argument("--email", action="store_true", help="email a summary and the report when done")
     r.set_defaults(fn=cmd_run)
+    sub.add_parser("test-email").set_defaults(fn=cmd_test_email)
+    load_env()
     a = ap.parse_args()
-    a.fn(a)
+    try:
+        a.fn(a)
+    except BaseException as e:  # a scheduled run that dies silently is worse than an alert email
+        if getattr(a, "email", False) and not isinstance(e, KeyboardInterrupt):
+            try:
+                send_email("Marketplace finder FAILED", f"{type(e).__name__}: {e}\n\nIf it says 'Not logged in', run: python finder.py login")
+            except Exception:
+                pass
+        raise
