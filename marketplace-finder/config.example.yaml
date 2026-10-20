@@ -14,6 +14,19 @@ base: &base
   must_include: [imac]
   exclude: [broken, "for parts", spares, repair, faulty, cracked, "not working", wanted, "21.5", "24 inch", mini]
 
+base_m1: &base_m1
+  query: imac 24 m1
+  min_price: 250
+  max_price: 399
+  wanted: >
+    24 inch iMac with an Apple silicon chip (M1 from 2021, or newer such as M3), 8-core GPU
+    preferred, 256GB SSD or larger, 8GB RAM or more, with the original Magic Keyboard and
+    Magic Mouse included. Must be fully working: no cracked screen, faults or water damage,
+    and signed out of iCloud with Activation Lock off. Not Intel iMacs and not 27 inch.
+    Best possible spec for under 400 pounds. Be sceptical of too-good-to-be-true prices.
+  must_include: [imac]
+  exclude: [broken, "for parts", spares, repair, faulty, cracked, "not working", wanted, "21.5", "27", "27in", mini, intel]
+
 west_areas: &west [devon, cornwall, somerset, bristol, bath, weston, taunton, exeter, plymouth, torquay, dorset, dorchester, weymouth, yeovil, bridgwater, glastonbury, wells, truro, newquay, barnstaple, bideford, braunton, ilfracombe, tiverton, bideford]
 
 location: ""                # default: location saved on your Facebook account
@@ -31,5 +44,17 @@ searches:
     areas: *west
   - <<: *base
     name: Near Hampton Wick (30 min drive)
+    location: london
+    areas: [hampton, kingston, surbiton, teddington, twickenham, richmond, kew, putney, wimbledon, morden, sutton, epsom, esher, walton, weybridge, hounslow, isleworth, feltham, staines, heathrow, ealing, brentford, chiswick, hammersmith, fulham, london, surrey, middlesex]
+
+  - <<: *base_m1
+    name: M1 iMac 24 - your saved location
+    areas: *west
+  - <<: *base_m1
+    name: M1 iMac 24 - Bristol area
+    location: bristol
+    areas: *west
+  - <<: *base_m1
+    name: M1 iMac 24 - near Hampton Wick
     location: london
     areas: [hampton, kingston, surbiton, teddington, twickenham, richmond, kew, putney, wimbledon, morden, sutton, epsom, esher, walton, weybridge, hounslow, isleworth, feltham, staines, heathrow, ealing, brentford, chiswick, hammersmith, fulham, london, surrey, middlesex]
