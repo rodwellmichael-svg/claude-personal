@@ -279,6 +279,24 @@ def email_report(results, out):
     print("Email sent:", subject)
 
 
+def notify(title, message):
+    """macOS notification banner (no passwords needed). Silently does nothing off macOS."""
+    try:
+        subprocess.run(
+            ["osascript", "-e", "on run argv", "-e", "display notification (item 1 of argv) with title (item 2 of argv)",
+             "-e", "end run", message[:200], title[:100]], check=False, timeout=15)
+    except Exception:
+        pass
+
+
+def summarise(results):
+    items = [i for lst in results.values() for i in lst]
+    new = [i for i in items if i.get("new") and i["verdict"] != "skip"]
+    buys = [i for i in new if i["verdict"] == "buy"]
+    best = max(new, key=lambda x: x["value_score"], default=None)
+    return items, new, buys, best
+
+
 def cmd_test_email(_):
     send_email("Marketplace finder: test email", "Email settings work.")
     print("Test email sent to", os.environ.get("EMAIL_TO"))
@@ -346,6 +364,14 @@ def cmd_run(args):
     (RESULTS / f"{stamp}.json").write_text(json.dumps(results, indent=2))
     SEEN.write_text(json.dumps(sorted(seen)))
     print("Report:", out)
+    (RESULTS / "latest.html").write_text(out.read_text())  # always-current copy to open
+    if args.notify:
+        _, new, buys, best = summarise(results)
+        if best:
+            notify(f"iMacs: {len(new)} new ({len(buys)} buy)",
+                   f"Best: {best['price_text']} {best['title']} - {best['location']}. Open results/latest.html")
+        else:
+            notify("iMacs: no new listings", "Nothing new since the last check.")
     if args.email:
         try:
             email_report(results, out)
@@ -364,13 +390,16 @@ if __name__ == "__main__":
     r.add_argument("--no-ai", action="store_true")
     r.add_argument("--no-open", action="store_true")
     r.add_argument("--email", action="store_true", help="email a summary and the report when done")
+    r.add_argument("--notify", action="store_true", help="show a macOS notification when done")
     r.set_defaults(fn=cmd_run)
     sub.add_parser("test-email").set_defaults(fn=cmd_test_email)
     load_env()
     a = ap.parse_args()
     try:
         a.fn(a)
-    except BaseException as e:  # a scheduled run that dies silently is worse than an alert email
+    except BaseException as e:  # a scheduled run that dies silently is worse than an alert
+        if getattr(a, "notify", False) and not isinstance(e, KeyboardInterrupt):
+            notify("iMac search FAILED", f"{type(e).__name__}: {e}"[:150])
         if getattr(a, "email", False) and not isinstance(e, KeyboardInterrupt):
             try:
                 send_email("Marketplace finder FAILED", f"{type(e).__name__}: {e}\n\nIf it says 'Not logged in', run: python finder.py login")

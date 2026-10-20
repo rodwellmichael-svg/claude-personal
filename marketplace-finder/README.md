@@ -31,17 +31,19 @@ python finder.py run --no-ai    # skip Claude scoring
 Reports land in `results/` (HTML + JSON). Listings seen before are not marked NEW.
 The login session lives in `.profile/` (git-ignored — treat it like a password).
 
-## Twice-daily run with an emailed report
+## Twice-daily run with a macOS notification (and optional email)
 
-1. `cp .env.example .env`, then fill in `ANTHROPIC_API_KEY`, `SMTP_USER`, `SMTP_PASSWORD` and `EMAIL_TO`.
-   For Gmail, `SMTP_PASSWORD` must be an **App Password** (needs 2-Step Verification), not your normal password.
-2. `python finder.py test-email` - should email you a test message.
-3. `./install_schedule.sh` - runs at about 08:20 and 18:20 each day (plus a random 0-15 min delay).
+1. `cp .env.example .env`, then fill in `ANTHROPIC_API_KEY`. Email settings are optional.
+2. `./install_schedule.sh` - runs at about 08:20 and 18:20 each day (plus a random 0-15 min delay).
    The Mac must be awake and logged in; Chrome opens briefly. Log: `logs/scheduled.log`.
+3. Each run shows a notification ("iMacs: 3 new (1 buy)") and refreshes `results/latest.html`;
+   `open results/latest.html` shows the full ranked report. A failed run (e.g. "Not logged in")
+   shows an "iMac search FAILED" notification.
 4. `./uninstall_schedule.sh` removes it.
 
-Each email lists the new buy/maybe listings with links and includes the full report. If a run fails
-(for example "Not logged in") you get a "FAILED" email. `.env` is git-ignored and set to owner-only.
+Optional email: set `SMTP_USER`, `SMTP_PASSWORD` (a Gmail **App Password**) and `EMAIL_TO` in `.env`,
+check with `python finder.py test-email`, and the scheduled run will email as well.
+`.env` is git-ignored and set to owner-only.
 
 ## Optional: schedule with cron
 
