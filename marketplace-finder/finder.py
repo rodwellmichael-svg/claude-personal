@@ -146,6 +146,23 @@ def fetch_detail(page, it):
         print("  skipped detail page:", type(e).__name__)
 
 
+def year_filter(items, s):
+    """Keep only the wanted model year, plus listings whose year is unknown."""
+    want = s.get("only_year")
+    if not want:
+        return items
+    keep = []
+    for i in items:
+        year = i.get("year")
+        if year is None and "year" not in i:  # no AI: fall back to years named in the title
+            found = {int(y) for y in re.findall(r"\b(20[01]\d|202\d)\b", i["title"])}
+            year = None if not found or want in found else min(found)
+        if year is None or int(year) == int(want):
+            keep.append(i)
+    print(f"  year filter ({want} or unknown): kept {len(keep)} of {len(items)}")
+    return keep
+
+
 def heuristic_score(items):
     prices = [i["price"] for i in items if i["price"]]
     med = statistics.median(prices) if prices else 0
@@ -171,8 +188,14 @@ condition and completeness in the description, match to my brief, seller/scam re
 (too-cheap, deposits, off-platform payment, stock photos, vague text). Be sceptical and
 don't invent specs that aren't stated.
 
+Also work out the MODEL YEAR of each machine. Use the year if the listing states it, otherwise
+infer it only when the hardware makes it clear (CPU generation, GPU, display type, "Late 2015" etc.).
+If it is genuinely ambiguous (e.g. only "2019/2020 style" or a model number shared by two years such
+as A2115, which covers both 2019 and 2020), return null. Never guess.
+
 Return ONLY a JSON array, one object per listing:
 {{"id": str, "value_score": 0-100, "verdict": "buy"|"maybe"|"skip", "fair_price": number|null,
+  "year": integer|null, "year_basis": "stated"|"inferred from hardware"|"unknown",
   "reasons": "1-2 sentences", "red_flags": "short or empty"}}
 
 LISTINGS:
@@ -185,7 +208,8 @@ LISTINGS:
     for i in items:
         d = by_id.get(i["id"], {})
         i.update(value_score=d.get("value_score", 0), verdict=d.get("verdict", "skip"),
-                 fair_price=d.get("fair_price"), reasons=d.get("reasons", "not scored"),
+                 fair_price=d.get("fair_price"), year=d.get("year"),
+                 year_basis=d.get("year_basis", "unknown"), reasons=d.get("reasons", "not scored"),
                  red_flags=d.get("red_flags", ""))
     return items
 
@@ -203,7 +227,8 @@ def render(results, path):
                 f"<div class='c {i['verdict']}'><b>{i['value_score']}</b> "
                 f"<a href='{i['url']}'>{html.escape(i['title'])}</a>{star}<br>"
                 f"{html.escape(i['price_text'])}{fair} · {html.escape(i['location'])} · "
-                f"<i>{i['verdict']}</i>{' · NEW' if i.get('new') else ''}<br>"
+                f"<i>{i['verdict']}</i>{' · NEW' if i.get('new') else ''}"
+                f" · {('model year ' + str(i['year']) + ' (' + i.get('year_basis', '') + ')') if i.get('year') else 'year unknown'}<br>"
                 f"{html.escape(i['reasons'])}"
                 + (f"<br><span class='f'>⚠ {html.escape(i['red_flags'])}</span>" if i["red_flags"] else "")
                 + "</div>")
@@ -255,6 +280,7 @@ def cmd_run(args):
                 except Exception as e:  # fall back rather than lose the run
                     print("AI scoring failed, using heuristic:", e)
                     items = heuristic_score(items)
+            items = year_filter(items, s)
             results[s["name"]] = items
             seen.update(i["id"] for i in items)
         ctx.close()

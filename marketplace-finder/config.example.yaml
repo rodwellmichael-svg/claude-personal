@@ -10,6 +10,7 @@ base: &base
   min_price: 200
   max_price: 500
   wanted: *wanted
+  only_year: 2020          # keep 2020 models, plus any whose year is unknown
   must_include: [imac]
   exclude: [broken, "for parts", spares, repair, faulty, cracked, "not working", wanted, "21.5", "24 inch", mini]
 
